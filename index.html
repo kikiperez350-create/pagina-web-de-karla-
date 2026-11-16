@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raíz Viva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar full">
+  <div class="wrap"><span class="msg" id="announce">Realizamos envíos nacionales</span></div>
+</div>
+
+<header class="site full">
+  <div class="wrap">
+    <div class="head">
+      <div class="left">Tienda 100% en línea</div>
+      <a class="logo" href="#inicio">Raíz<span>Viva</span></a>
+      <div class="right"><button class="cart-btn" id="openCart" aria-label="Abrir carrito">Carrito <span class="n" id="count">0</span></button></div>
+    </div>
+    <nav class="main" aria-label="Principal">
+      <a class="hot" href="#bundles">Ofertas -10%</a>
+      <a href="#sets">Sets de regalo</a>
+      <a href="#nuevo">Haircare</a>
+      <a href="#bundles">Rutinas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio" class="wrap">
+  <div class="hero">
+    <div class="copy">
+      <p class="eyebrow">Cuidado capilar hecho en el Caribe</p>
+      <h1>Menos quiebre. Más fuerza. Cabello que crece.</h1>
+      <p class="lead">Fórmulas con aloe, coco, karité y aguacate para cabello que vive con sol, humedad y playa. Sin sulfatos agresivos ni parabenos.</p>
+      <a class="btn primary" href="#nuevo">Ver más</a>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 360 300">
+        <circle cx="180" cy="150" r="130" fill="#FFF4F8" opacity=".18"/>
+        <g transform="translate(60 40)"><rect x="24" y="0" width="30" height="18" rx="5" fill="#3B1024"/><rect x="32" y="18" width="14" height="10" fill="#3B1024"/><rect x="0" y="28" width="78" height="190" rx="22" fill="#FFF4F8"/><rect x="12" y="80" width="54" height="100" rx="10" fill="#F5BDD3"/><rect x="20" y="96" width="38" height="5" rx="2" fill="#3B1024"/><rect x="20" y="108" width="26" height="4" rx="2" fill="#7A4A5E"/></g>
+        <g transform="translate(150 70)"><rect x="0" y="0" width="100" height="40" rx="10" fill="#3B1024"/><rect x="0" y="34" width="100" height="136" rx="18" fill="#FBD9E6"/><rect x="14" y="70" width="72" height="70" rx="8" fill="#FFF4F8"/><rect x="24" y="84" width="52" height="5" rx="2" fill="#B8165A"/><rect x="24" y="96" width="34" height="4" rx="2" fill="#7A4A5E"/></g>
+        <g transform="translate(270 100)"><rect x="12" y="0" width="22" height="14" rx="4" fill="#3B1024"/><rect x="0" y="12" width="46" height="130" rx="14" fill="#FFF4F8"/><rect x="8" y="50" width="30" height="60" rx="6" fill="#B8165A" opacity=".85"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="promos">
+    <article class="promo p1">
+      <svg viewBox="0 0 120 130" aria-hidden="true"><rect x="10" y="40" width="100" height="80" rx="10" fill="#FFE9F1"/><rect x="52" y="40" width="16" height="80" fill="#B8165A"/><path d="M60 40 C40 10 20 30 60 40 C100 30 80 10 60 40Z" fill="#B8165A"/></svg>
+      <h3>El regalo perfecto para estas fiestas</h3>
+      <p>Sets listos para regalar, con envoltura incluida.</p>
+      <a class="btn" href="#sets">Ver más</a>
+    </article>
+    <article class="promo p2">
+      <svg viewBox="0 0 120 130" aria-hidden="true"><circle cx="60" cy="68" r="46" fill="#F5BDD3"/><path d="M40 70 Q60 40 80 70 Q60 100 40 70Z" fill="#B8165A"/></svg>
+      <h3>Una rutina completa, con descuento</h3>
+      <p>Shampoo, acondicionador y mascarilla juntos y hasta 15% más baratos.</p>
+      <a class="btn dark" href="#bundles">Ver más</a>
+    </article>
+    <article class="promo p3">
+      <svg viewBox="0 0 120 130" aria-hidden="true"><path d="M20 120 Q10 60 60 20 Q110 60 100 120Z" fill="#FFF4F8" opacity=".9"/><path d="M60 20 Q40 70 60 120" stroke="#B8165A" stroke-width="4" fill="none"/></svg>
+      <h3>Tu cabello merece un momento para brillar</h3>
+      <p>Envío gratis en compras desde RD$ 3,000 a todo el país.</p>
+      <a class="btn" href="#nuevo">Ver más</a>
+    </article>
+  </div>
+
+  <div class="cats" aria-label="Categorías">
+    <a href="#nuevo">Haircare</a>
+    <a href="#nuevo">Aceites y sérums</a>
+    <a href="#nuevo">Tratamientos</a>
+    <a href="#bundles">Rutinas en descuento</a>
+    <a href="#sets">Sets de regalo</a>
+  </div>
+
+  <section class="block" id="sets">
+    <div class="sec-head"><h2>Sets de regalo ✨</h2><div class="arrows"><button data-prev="sets" aria-label="Anterior">←</button><button data-next="sets" aria-label="Siguiente">→</button></div></div>
+    <div class="track" id="track-sets" tabindex="0" aria-label="Sets de regalo"></div>
+  </section>
+
+  <section class="block" id="bundles">
+    <div class="sec-head"><h2>Rutinas en descuento</h2><div class="arrows"><button data-prev="bundles" aria-label="Anterior">←</button><button data-next="bundles" aria-label="Siguiente">→</button></div></div>
+    <div class="track" id="track-bundles" tabindex="0" aria-label="Rutinas en descuento"></div>
+  </section>
+
+  <section class="block" id="nuevo">
+    <div class="sec-head"><h2>Descubre lo nuevo</h2><div class="arrows"><button data-prev="nuevo" aria-label="Anterior">←</button><button data-next="nuevo" aria-label="Siguiente">→</button></div></div>
+    <div class="track" id="track-nuevo" tabindex="0" aria-label="Productos nuevos"></div>
+  </section>
+
+  <div class="news" id="suscripcion">
+    <h2>10% en tu primera compra</h2>
+    <p>Suscríbete y recibe consejos de cuidado capilar y ofertas antes que nadie.</p>
+    <form id="newsForm" novalidate>
+      <label for="email" style="position:absolute;left:-9999px">Correo electrónico</label>
+      <input id="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+      <button class="btn" type="submit">Suscribirme</button>
+    </form>
+    <div class="msg" id="newsMsg" aria-live="polite"></div>
+  </div>
+</main>
+
+<footer class="site full">
+  <div class="wrap">
+    <div class="fcols">
+      <div><a class="logo" href="#inicio" style="color:var(--band-ink)">Raíz<span style="color:#F7A9C8">Viva</span></a><p style="opacity:.8;max-width:30ch">Cuidado capilar con ingredientes naturales, hecho para el clima del Caribe.</p></div>
+      <div><h4>Explorar</h4><a href="#sets">Sets de regalo</a><a href="#bundles">Rutinas en descuento</a><a href="#nuevo">Novedades</a></div>
+    </div>
+    <div class="pay" aria-label="Métodos de pago"><span>Visa</span><span>Mastercard</span><span>American Express</span><span>Transferencia</span><span>Pago contra entrega</span></div>
+    <p class="copy">© 2026 Raíz Viva · Página creada por Karla Sánchez</p>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+  <div class="dh"><h2>Tu carrito</h2><button class="close" id="closeCart" aria-label="Cerrar carrito">✕</button></div>
+  <div class="items" id="items"></div>
+  <div class="total"><span>Total</span><span id="total">RD$ 0</span></div>
+  <button class="btn primary" id="checkout">Finalizar pedido</button>
+  <p class="note" id="note"></p>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
